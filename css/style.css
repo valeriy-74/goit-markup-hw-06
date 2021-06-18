@@ -206,34 +206,39 @@ ul {
   transform: translate(-50%, -50%);
   width: 528px;
   background-color: #fff;
-  padding: 10px;
+  padding: 40px;
 }
 .modal .title {
   text-align: center;
-  margin-top: 40px;
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
   color: var(--secondary-text-color);
 }
-.form {
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
-}
+
 .form-field input {
-  position: relative;
   width: 100%;
   margin-bottom: 5px;
-  padding: 6px 10px 6px 40px;
+  padding: 10px 10px 10px 40px;
   border: 1px solid var(--color-icon-clients);
   border-radius: 3px;
+  outline: none;
 }
-/* .form-field {
-} */
+.form-input:focus,
+.form-icon:focus {
+  border: 2px solid var(--accent-text-color);
+  fill: var(--accent-text-color);
+}
+.form-field {
+  display: block;
+  position: relative;
+}
 .form-icon {
   position: absolute;
   left: 0px;
+  margin-left: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .form-field textarea {
   resize: none;
@@ -424,7 +429,6 @@ ul {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.15;
-  /* outline: 2px solid red; */
 }
 .feature-list .text {
   font-size: 14px;
@@ -645,6 +649,7 @@ ul {
   margin-left: 93px;
 }
 .join-list {
+  position: relative;
   display: flex;
   justify-content: flex-start;
 }
@@ -672,4 +677,43 @@ ul {
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 3px;
   background-color: var(--secondary-background-color);
+}
+.sign {
+  margin-right: 20px;
+}
+.telegram {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  margin-right: 28px;
+}
+.checkbox {
+  appearance: none;
+}
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+  margin-top: 18px;
+}
+.icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid black;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.icon:focus-within {
+  border: 2px solid var(--accent-text-color);
+}
+.checkbox:checked + .icon {
+  border-color: var(--accent-text-color);
+  background-color: var(--accent-text-color);
+  background-image: url("../images/check.svg");
+  background-size: contain;
+  background-origin: border-box;
+}
+.agreement {
+  margin-left: 8px;
 }
