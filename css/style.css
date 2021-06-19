@@ -224,11 +224,14 @@ ul {
   border-radius: 3px;
   outline: none;
 }
-.form-input:focus,
-.form-icon:focus {
-  border: 2px solid var(--accent-text-color);
+.form-input:focus {
+  border: 1px solid var(--accent-text-color);
+  outline: none;
+}
+.form-icon:focus + .form-icon {
   fill: var(--accent-text-color);
 }
+
 .form-field {
   display: block;
   position: relative;
@@ -249,6 +252,10 @@ ul {
   border: 1px solid var(--color-icon-clients);
   border-radius: 3px;
 }
+.textarea:focus {
+  border: 1px solid var(--accent-text-color);
+  outline: none;
+}
 .form-button {
   display: block;
   margin-top: 30px;
@@ -266,9 +273,15 @@ ul {
   border-radius: 5px;
   border: transparent;
 }
+
 .conditions {
   margin-left: 10px;
   color: var(--accent-text-color);
+  outline: none;
+}
+.conditions:focus {
+  border: 1px solid var(--accent-text-color);
+  outline: none;
 }
 .btnClose {
   position: absolute;
